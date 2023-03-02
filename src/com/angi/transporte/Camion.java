@@ -34,32 +34,20 @@ public class Camion implements ITransportable {
      * @param dimY alto del paquete
      * @param dimZ ancho del paquete
      * @param peso del paquete
-     * @return los datos del embalaje
+     * @return tipo de embalaje 0=palet, 1=caja de cartón, 2=caja de madera
      */
     @Override
     public Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
         Integer tipo = null;
-        Float volumen=(dimX*dimY*dimZ)+peso;
-        switch (tipo) {
-            case 0:
-                if(volumen == 5000){
-                    System.out.println("Palet");
-                }
-                break;
-            case 1:
-                if(volumen<=1000){
-                    System.out.println("Caja de Cartón");
-                }
-                break;
-            case 2:
-                if(volumen<2500){
-                    System.out.println("Caja de Madera");
-                }
-                break;
-            default:
-                return null;
+        Float volumen = dimX * dimY * dimZ;
+        if (volumen >= 1000) {
+            return 0;
+        } else {
+            if (peso < 5) {
+                return 1;
+            } else {
+                return 2;
+            }
         }
-        return tipo;
     }
-
 }
