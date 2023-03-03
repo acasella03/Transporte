@@ -9,7 +9,7 @@ Float costeTotal(Integer cp);
 Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso);
 ```
 
-![Interfaz](/home/dam1/IdeaProjects/Transporte/ITransportable.jpg)
+![Interfaz](https://github.com/acasella03/Transporte/blob/main/.gitignore/ITransportable.jpg)
 
 ### Clase Camion:
 Se encarga de desarrollar los métodos costeTotal y tipoEmpalaje de acuerdo a las especificaciones propias de éste tipo de transporte.
@@ -79,10 +79,10 @@ public static ITransportable getTransporte(int tipoTransporte) {
     }
 ```
 
-![Clase FactoriaTransporte](/home/dam1/IdeaProjects/Transporte/FactoriaTransporte.jpg)
+![Clase FactoriaTransporte](https://github.com/acasella03/Transporte/blob/main/.gitignore/FactoriaTransporte.jpg)
 
 ### Clase Transporte(main):
 Se encarga de desarrollar la aplicación calculando el coste y tipo de embalaje de acuerdo a un tipo de transporte especificado, instanciando sólo un objeto de tipo ITransportable.
 
 ### Diagrama de Clases:
-![DiagramaClases](/home/dam1/IdeaProjects/Transporte/FactoriaDeTransporte.jpg)
+![DiagramaClases](https://github.com/acasella03/Transporte/blob/main/FactoriaDeTransporte.jpg)
