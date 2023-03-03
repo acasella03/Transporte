@@ -1,8 +1,8 @@
-/**
- * Define un tipo de transporte
- */
 package com.angi.transporte;
 
+/**
+ * Define el tipo de transporte camión.
+ */
 public class Camion implements ITransportable {
     /**
      * Constructor
@@ -20,7 +20,7 @@ public class Camion implements ITransportable {
     public Float costeTotal(Integer cp) {
         Float coste = null;
         if (CP > cp) {
-            coste = Float.valueOf((CP - cp) * 1.0f);
+            coste = Float.valueOf((CP - cp) * 0.9f);
         } else {
             coste = Float.valueOf((cp - CP) * 1.0f);
         }

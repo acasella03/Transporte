@@ -1,13 +1,14 @@
 package com.angi.transporte;
 
 /**
- * Interface que tiene los métodos comunes a todos tipos de transporte
+ * Interface que tiene los métodos comunes a todos tipos de transporte.
  */
 public interface ITransportable {
     /**
      * Indica un código postal.
      */
-    static final Integer CP=36500;
+    static final int CP = 36500;
+
     /**
      * método que calcula el coste total del envío del paquete.
      */

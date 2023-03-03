@@ -1,10 +1,8 @@
-/**
- * Define un tipo de transporte
- */
 package com.angi.transporte;
 
-import org.w3c.dom.ls.LSOutput;
-
+/**
+ * Define el tipo de transporte bicicleta.
+ */
 public class Bicicleta implements ITransportable {
 
     /**
@@ -23,9 +21,9 @@ public class Bicicleta implements ITransportable {
     public Float costeTotal(Integer cp) {
         Float coste = null;
         if (CP > cp) {
-            coste = Float.valueOf((CP - cp) * 1.5f);
+            coste = Float.valueOf((CP - cp) * 0.10f);
         } else {
-            coste = Float.valueOf((cp - CP) * 1.5f);
+            coste = Float.valueOf((cp - CP) * 0.1f);
         }
         return coste;
     }
@@ -45,6 +43,6 @@ public class Bicicleta implements ITransportable {
         if (volumen <= 10 && peso < 5) {
             return 1;
         }
-            return 2;
+        return 2;
     }
 }
