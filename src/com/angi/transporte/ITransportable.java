@@ -17,5 +17,5 @@ public interface ITransportable {
     /**
      * método que indica el tipo de embalaje del paquete.
      */
-    Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso);
+    TipoEmbalaje tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso);
 }

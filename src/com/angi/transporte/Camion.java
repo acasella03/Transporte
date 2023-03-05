@@ -34,19 +34,19 @@ public class Camion implements ITransportable {
      * @param dimY alto del paquete
      * @param dimZ ancho del paquete
      * @param peso del paquete
-     * @return tipo de embalaje 0=palet, 1=caja de cartón, 2=caja de madera
+     * @return tipo de embalaje
      */
     @Override
-    public Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
+    public TipoEmbalaje tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
         Integer tipo = null;
         Float volumen = dimX * dimY * dimZ;
         if (volumen >= 1000) {
-            return 0;
+            return TipoEmbalaje.PALET;
         } else {
             if (peso < 5) {
-                return 1;
+                return TipoEmbalaje.CAJA_CARTON;
             } else {
-                return 2;
+                return TipoEmbalaje.CAJA_MADERA;
             }
         }
     }
