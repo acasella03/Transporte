@@ -6,11 +6,18 @@ Se encarga de crear un protocolo con declaración pública de lo que van a reali
 
 ```
 Float costeTotal(Integer cp);
-Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso);
+TipoEmbalaje tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso);
 ```
 
 ![Interfaz](https://github.com/acasella03/Transporte/blob/main/ITransportable.jpg)
 
+### Clase Enum:
+Clasifica los tipos de embalaje:
+```
+public enum TipoEmbalaje {
+PALET, CAJA_CARTON, CAJA_MADERA;
+}
+```
 ### Clase Camion:
 Se encarga de desarrollar los métodos costeTotal y tipoEmpalaje de acuerdo a las especificaciones propias de éste tipo de transporte.
 
@@ -25,16 +32,16 @@ public Float costeTotal(Integer cp) {
         return coste;
     }
 
-public Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
+public TipoEmbalaje tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
         Integer tipo = null;
         Float volumen = dimX * dimY * dimZ;
         if (volumen >= 1000) {
-            return 0;
+            return TipoEmbalaje.PALET;
         } else {
             if (peso < 5) {
-                return 1;
+                return TipoEmbalaje.CAJA_CARTON;
             } else {
-                return 2;
+                return TipoEmbalaje.CAJA_MADERA;
             }
         }
     }
@@ -54,12 +61,12 @@ public Float costeTotal(Integer cp) {
         return coste;
     }
 
-public Integer tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
+public TipoEmbalaje tipoEmbalaje(Float dimX, Float dimY, Float dimZ, Float peso) {
         Float volumen = dimX * dimY * dimZ;
         if (volumen <= 10 && peso < 5) {
-            return 1;
+            return TipoEmbalaje.CAJA_CARTON;
         }
-        return 2;
+        return TipoEmbalaje.CAJA_MADERA;
     }
 ```
 
