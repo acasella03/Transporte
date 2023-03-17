@@ -13,6 +13,10 @@ public class FactoriaTransporte {
      * Opción bicicleta.
      */
     public static final int BICICLETA = 2;
+    /**
+     * Opción barco
+     */
+    public static final int BARCO = 3;
 
     /**
      * Método para seleccionar el tipo de transporte.
@@ -26,6 +30,8 @@ public class FactoriaTransporte {
                 return new Camion();
             case BICICLETA:
                 return new Bicicleta();
+            case BARCO:
+                return new Barco();
             default:
                 return null;
         }

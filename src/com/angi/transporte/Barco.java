@@ -1,4 +1,5 @@
 package com.angi.transporte;
+
 /**
  * Define el tipo de transporte barco.
  */
